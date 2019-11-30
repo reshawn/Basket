@@ -46,15 +46,24 @@ class Components extends React.Component {
           }}
           {...rest}
         />
-        <Parallax image={require("assets/img/bg4.jpg")}>
+        <Parallax image={require("assets/img/druid.jpg")}>
           <div className={classes.container}>
             <GridContainer>
-              <GridItem>
+              <GridItem xs={12} sm={12} md={6}>
                 <div className={classes.brand}>
-                  <h1 className={classes.title}>Basket.</h1>
+                  <h1 className={classes.title}>
+                    Basket
+                  </h1>
                   <h3 className={classes.subtitle}>
-                    A Badass community service.
+                    A D&D Platformmm
                   </h3>
+                  <h4>
+                    The same classic game you love,
+                    but a whole new way to experience it.
+                    Grab a Basket, grab your friends,
+                    and live your adventure!
+                  </h4>
+                  <br />
                 </div>
               </GridItem>
             </GridContainer>
@@ -62,16 +71,16 @@ class Components extends React.Component {
         </Parallax>
 
         <div className={classNames(classes.main, classes.mainRaised)}>
-          <SectionBasics />
-          <SectionNavbars />
-          <SectionTabs />
-          <SectionPills />
-          <SectionNotifications />
-          <SectionTypography />
-          <SectionJavascript />
-          <SectionCarousel />
-          <SectionCompletedExamples />
-          <SectionLogin />
+          // <SectionBasics />
+          // <SectionNavbars />
+          // <SectionTabs />
+          // <SectionPills />
+          // <SectionNotifications />
+          // <SectionTypography />
+          // <SectionJavascript />
+          // <SectionCarousel />
+          // <SectionCompletedExamples />
+          // <SectionLogin />
           <GridItem md={12} className={classes.textCenter}>
             <Link to={"/login-page"} className={classes.link}>
               <Button color="primary" size="lg" simple>

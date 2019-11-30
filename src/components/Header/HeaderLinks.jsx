@@ -46,47 +46,31 @@ function HeaderLinks({ ...props }) {
 
   return (
     <List className={classes.list}>
-      {!user &&
-        <ListItem className={classes.listItem}>
-          <Button
-            href="/login-page"
-            color="transparent"
-            className={classes.navLink}
-          >
-            <VerifiedUser className={classes.icons} /> Login
-          </Button>
-        </ListItem>
-      }
-      {!user &&
-        <ListItem className={classes.listItem}>
-          <Button
-            href="/login-page"
-            color="transparent"
-            className={classes.navLink}
-          >
-            <Assignment className={classes.icons} /> Sign up
-          </Button>
-        </ListItem>
-      }
-      {user &&
-        <ListItem className={classes.listItem}>
-          <Button
-            color="transparent"
-            onClick={() => signOut()}
-            className={classes.navLink}
-          >
-            <ExitToApp className={classes.icons} /> Sign out
-          </Button>
-        </ListItem>
-      }
-      {user &&
-        <ListItem className={classes.listItem}>
-          <Button
-            href="/profile-page"
-            color="transparent"
-            className={classes.navLink}
-          >
-            <Person className={classes.icons} /> Profile
+      <ListItem className={classes.listItem}>
+        <Button
+          href="/login-page"
+          color="transparent"
+          className={classes.navLink}
+        >
+          <VerifiedUser className={classes.icons} /> Login
+        </Button>
+      </ListItem>
+      <ListItem className={classes.listItem}>
+        <Button
+          href="/signup"
+          color="transparent"
+          className={classes.navLink}
+        >
+          <Assignment className={classes.icons} /> Sign up
+        </Button>
+      </ListItem>
+      <ListItem className={classes.listItem}>
+        <Button
+          href="/profile-page"
+          color="transparent"
+          className={classes.navLink}
+        >
+          <Person className={classes.icons} /> Profile
         </Button>
         </ListItem>
       }

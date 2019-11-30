@@ -31,7 +31,6 @@ function HeaderLinks({ ...props }) {
   useFirebase(firebase => {
     firebase.auth().onAuthStateChanged(user => {
       if (user) setUser(user);
-      console.log(user)
     });
   })
   const signOut = () => {

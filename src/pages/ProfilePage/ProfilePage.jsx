@@ -47,7 +47,7 @@ class ProfilePage extends React.Component {
       <div>
         <Header
           color="transparent"
-          brand="Material Kit React"
+          brand="Basket"
           rightLinks={<HeaderLinks />}
           fixed
           changeColorOnScroll={{
@@ -70,13 +70,13 @@ class ProfilePage extends React.Component {
                       <h3 className={classes.title}>Christian Louboutin</h3>
                       <h6>DESIGNER</h6>
                       <Button justIcon link className={classes.margin5}>
-                        <FaTwitter/>
+                        <FaTwitter />
                       </Button>
                       <Button justIcon link className={classes.margin5}>
-                        <FaInstagram/>
+                        <FaInstagram />
                       </Button>
                       <Button justIcon link className={classes.margin5}>
-                        <FaFacebook/>
+                        <FaFacebook />
                       </Button>
                     </div>
                   </div>

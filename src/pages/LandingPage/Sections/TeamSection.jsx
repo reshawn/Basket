@@ -19,9 +19,9 @@ import CardFooter from "components/Card/CardFooter.jsx";
 
 import teamStyle from "assets/jss/material-kit-react/views/landingPageSections/teamStyle.jsx";
 
-import team1 from "assets/img/faces/avatar.jpg";
-import team2 from "assets/img/faces/christian.jpg";
-import team3 from "assets/img/faces/kendall.jpg";
+import team1 from "assets/img/faces/reshawn.jpg";
+import team2 from "assets/img/faces/jedidiah.jpg";
+import team3 from "assets/img/faces/nirvan.jpg";
 
 class TeamSection extends React.Component {
   render() {
@@ -42,16 +42,15 @@ class TeamSection extends React.Component {
                   <img src={team1} alt="..." className={imageClasses} />
                 </GridItem>
                 <h4 className={classes.cardTitle}>
-                  Gigi Hadid
+                  Reshawn Ramjattan
                   <br />
-                  <small className={classes.smallTitle}>Model</small>
+                  <small className={classes.smallTitle}>Developer, Druid</small>
                 </h4>
                 <CardBody>
                   <p className={classes.description}>
-                    You can write here details about one of your team members.
-                    You can give more details about what they do. Feel free to
-                    add some <a href="#pablo">links</a> for people to be able to
-                    follow them outside the site.
+                    Usually the DM, how fair of a DM is subject to debate, but DM nonetheless.
+                    When he isn't, then he's a chaotic good Druid that specializes in nature magic.
+                    Developer on the side, likes react and stuff.
                   </p>
                 </CardBody>
                 <CardFooter className={classes.justifyCenter}>
@@ -60,21 +59,21 @@ class TeamSection extends React.Component {
                     color="transparent"
                     className={classes.margin5}
                   >
-                    <FaTwitter/>
+                    <FaTwitter />
                   </Button>
                   <Button
                     justIcon
                     color="transparent"
                     className={classes.margin5}
                   >
-                    <FaInstagram/>
+                    <FaInstagram />
                   </Button>
                   <Button
                     justIcon
                     color="transparent"
                     className={classes.margin5}
                   >
-                    <FaFacebook/>
+                    <FaFacebook />
                   </Button>
                 </CardFooter>
               </Card>
@@ -85,16 +84,15 @@ class TeamSection extends React.Component {
                   <img src={team2} alt="..." className={imageClasses} />
                 </GridItem>
                 <h4 className={classes.cardTitle}>
-                  Christian Louboutin
+                  Nirvan Sharma
                   <br />
-                  <small className={classes.smallTitle}>Designer</small>
+                  <small className={classes.smallTitle}>Developer, Archer</small>
                 </h4>
                 <CardBody>
                   <p className={classes.description}>
-                    You can write here details about one of your team members.
-                    You can give more details about what they do. Feel free to
-                    add some <a href="#pablo">links</a> for people to be able to
-                    follow them outside the site.
+                    Avid D&D player for 84 years just wanting to give back to the community.
+                    Lives his D&D campaigns vicariously thinking he's Legolas.
+                    But alas he was never that useful.
                   </p>
                 </CardBody>
                 <CardFooter className={classes.justifyCenter}>
@@ -103,14 +101,14 @@ class TeamSection extends React.Component {
                     color="transparent"
                     className={classes.margin5}
                   >
-                    <FaTwitter/>
+                    <FaTwitter />
                   </Button>
                   <Button
                     justIcon
                     color="transparent"
                     className={classes.margin5}
                   >
-                    <FaLinkedin/>
+                    <FaLinkedin />
                   </Button>
                 </CardFooter>
               </Card>
@@ -121,16 +119,17 @@ class TeamSection extends React.Component {
                   <img src={team3} alt="..." className={imageClasses} />
                 </GridItem>
                 <h4 className={classes.cardTitle}>
-                  Kendall Jenner
+                  Jedidiah Aqui
                   <br />
-                  <small className={classes.smallTitle}>Model</small>
+                  <small className={classes.smallTitle}>Developer, Paladin</small>
                 </h4>
                 <CardBody>
                   <p className={classes.description}>
-                    You can write here details about one of your team members.
-                    You can give more details about what they do. Feel free to
-                    add some <a href="#pablo">links</a> for people to be able to
-                    follow them outside the site.
+                    He used to rule the world.
+                    Seas would rise when he gave the word.
+                    Now in the morning he sleeps alone.
+                    Sweeps the streets he used to roam.
+                    Is it a blessing? Is it a curse? He continues to wonder.
                   </p>
                 </CardBody>
                 <CardFooter className={classes.justifyCenter}>
@@ -139,21 +138,21 @@ class TeamSection extends React.Component {
                     color="transparent"
                     className={classes.margin5}
                   >
-                    <FaTwitter/>
+                    <FaTwitter />
                   </Button>
                   <Button
                     justIcon
                     color="transparent"
                     className={classes.margin5}
                   >
-                    <FaInstagram/>
+                    <FaInstagram />
                   </Button>
                   <Button
                     justIcon
                     color="transparent"
                     className={classes.margin5}
                   >
-                    <FaFacebook/>
+                    <FaFacebook />
                   </Button>
                 </CardFooter>
               </Card>

@@ -3,9 +3,7 @@ import React from "react";
 import withStyles from "@material-ui/core/styles/withStyles";
 
 // @material-ui/icons
-import Chat from "@material-ui/icons/Chat";
-import VerifiedUser from "@material-ui/icons/VerifiedUser";
-import Fingerprint from "@material-ui/icons/Fingerprint";
+import { Call, DirectionsRun, Android } from "@material-ui/icons";
 // core components
 import GridContainer from "components/Grid/GridContainer.jsx";
 import GridItem from "components/Grid/GridItem.jsx";
@@ -20,13 +18,13 @@ class ProductSection extends React.Component {
       <div className={classes.section}>
         <GridContainer justify="center">
           <GridItem xs={12} sm={12} md={8}>
-            <h2 className={classes.title}>Let's talk product</h2>
+            <h2 className={classes.title}>Roll20? Troll20 Compared to Basket</h2>
             <h5 className={classes.description}>
-              This is the paragraph where you can write more details about your
-              product. Keep you user engaged by providing meaningful
-              information. Remember that by this time, the user is curious,
-              otherwise he wouldn't scroll to get here. Add a button if you want
-              the user to see more.
+              Basket is a sweeping assortment of tools for crafting a D&D campaign
+              that you'll never forget.
+              Map building, character creation, dice rolling, audio/video calls and much more
+              all in the same place.
+              Weaved together for a seamless experience that lets you dive right into the fun.
             </h5>
           </GridItem>
         </GridContainer>
@@ -34,27 +32,27 @@ class ProductSection extends React.Component {
           <GridContainer>
             <GridItem xs={12} sm={12} md={4}>
               <InfoArea
-                title="Free Chat"
-                description="Divide details about your product or agency work into parts. Write a few lines about each one. A paragraph describing a feature will be enough."
-                icon={Chat}
+                title="Characters"
+                description="Bring your latest persona to life directly in Basket. Manage characters and your lore with no hassle. Forgot your Str stat? Our shortcut commands allow you to easily retrieve character information too."
+                icon={DirectionsRun}
                 iconColor="info"
                 vertical
               />
             </GridItem>
             <GridItem xs={12} sm={12} md={4}>
               <InfoArea
-                title="Verified Users"
-                description="Divide details about your product or agency work into parts. Write a few lines about each one. A paragraph describing a feature will be enough."
-                icon={VerifiedUser}
+                title="Comms"
+                description="Crystal clear audio calls and reliable instant messaging. DM doesn't believe your spell is real? Our text channels allow for easy sharing, storing and creation of all your OP details"
+                icon={Call}
                 iconColor="success"
                 vertical
               />
             </GridItem>
             <GridItem xs={12} sm={12} md={4}>
               <InfoArea
-                title="Fingerprint"
-                description="Divide details about your product or agency work into parts. Write a few lines about each one. A paragraph describing a feature will be enough."
-                icon={Fingerprint}
+                title="Bots"
+                description="Playing online doesn't need to mean less immersion. Use our smart bots in your server for adding music to set the scene, program NPCs, random events and more."
+                icon={Android}
                 iconColor="danger"
                 vertical
               />

@@ -70,28 +70,12 @@ class LoginPage extends React.Component {
       let email = this.state.email
       let password = this.state.password
       this.props.firebase.auth().signInWithEmailAndPassword(email, password)
-        .then(function () { console.log('test1') })
+        .then(function () { })
         .catch(function (error) {
           // Handle Errors here.
           var errorCode = error.code;
           var errorMessage = error.message;
           console.log(errorCode, errorMessage);
-        });
-
-    }
-  }
-  signUp() {
-    if (this.state.firebaseInit) {
-      let email = this.state.email
-      let password = this.state.password
-      this.props.firebase.auth().createUserWithEmailAndPassword(email, password)
-
-        .catch(function (error) {
-          // Handle Errors here.
-          var errorCode = error.code;
-          var errorMessage = error.message;
-          console.log(errorCode, errorMessage);
-          // ...
         });
 
     }
@@ -116,7 +100,7 @@ class LoginPage extends React.Component {
         <Header
           absolute
           color="transparent"
-          brand="Material Kit React"
+          brand="Basket"
           rightLinks={<HeaderLinks />}
           {...rest}
         />
@@ -147,21 +131,6 @@ class LoginPage extends React.Component {
                     </CardHeader>
                     <p className={classes.divider}>Or Be Classical</p>
                     <CardBody>
-                      <CustomInput
-                        labelText="First Name..."
-                        id="first"
-                        formControlProps={{
-                          fullWidth: true
-                        }}
-                        inputProps={{
-                          type: "text",
-                          endAdornment: (
-                            <InputAdornment position="end">
-                              <People className={classes.inputIconsColor} />
-                            </InputAdornment>
-                          )
-                        }}
-                      />
                       <CustomInput
                         labelText="Email..."
                         id="email"
@@ -201,7 +170,7 @@ class LoginPage extends React.Component {
                     </CardBody>
                     <CardFooter className={classes.cardFooter}>
                       <Button onClick={this.onSubmit} simple color="primary" size="lg">
-                        Get started
+                        Enter
                       </Button>
                     </CardFooter>
                   </form>

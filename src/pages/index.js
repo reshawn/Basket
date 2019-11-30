@@ -1,6 +1,6 @@
 import React from "react";
-import {createMemoryHistory} from "history";
-import {Route, Router, Switch} from "react-router-dom";
+import { createMemoryHistory } from "history";
+import { Route, Router, Switch } from "react-router-dom";
 
 import "assets/scss/material-kit-react.scss?v=1.4.0";
 import 'typeface-roboto';
@@ -17,10 +17,9 @@ let hist = createMemoryHistory();
 export default () => (
   <Router history={hist}>
     <Switch>
-      <Route path="/landing-page" component={LandingPage} />
       <Route path="/profile-page" component={ProfilePage} />
       <Route path="/login-page" component={LoginPage} />
-      <Route path="/" component={Components} />
+      <Route path="/" component={LandingPage} />
       <Route path="/signup-page" component={SignupPage} />
     </Switch>
   </Router>

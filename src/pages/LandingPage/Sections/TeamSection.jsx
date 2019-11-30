@@ -20,7 +20,7 @@ import CardFooter from "components/Card/CardFooter.jsx";
 import teamStyle from "assets/jss/material-kit-react/views/landingPageSections/teamStyle.jsx";
 
 import team1 from "assets/img/faces/avatar.jpg";
-import team2 from "assets/img/faces/christian.jpg";
+import team2 from "assets/img/faces/userprofile.png";
 import team3 from "assets/img/faces/kendall.jpg";
 
 class TeamSection extends React.Component {

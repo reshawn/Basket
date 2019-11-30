@@ -10,7 +10,7 @@ import ListItem from "@material-ui/core/ListItem";
 import Tooltip from "@material-ui/core/Tooltip";
 
 // @material-ui/icons
-import { Loyalty, Assignment, CloudDownload, Person, VerifiedUser } from "@material-ui/icons";
+import { Loyalty, Assignment, ExitToApp, Person, VerifiedUser } from "@material-ui/icons";
 
 // React icons
 import { FaTwitter, FaFacebook, FaInstagram } from 'react-icons/fa';
@@ -21,8 +21,29 @@ import Button from "components/CustomButtons/Button.jsx";
 
 import headerLinksStyle from "assets/jss/material-kit-react/components/headerLinksStyle.jsx";
 
+import { useFirebase, FirebaseContext } from "gatsby-plugin-firebase"
+
 function HeaderLinks({ ...props }) {
+  const [user, setUser] = React.useState()
+  const firebase = React.useContext(FirebaseContext)
   const { classes } = props;
+
+  useFirebase(firebase => {
+    firebase.auth().onAuthStateChanged(user => {
+      if (user) setUser(user);
+      console.log(user)
+    });
+  })
+  const signOut = () => {
+    firebase.auth().signOut().then(() => {
+      // Sign-out successful.
+      setUser();
+      window.location = '/login-page';
+    }).catch(function (error) {
+      // An error happened.
+    });
+  }
+
   return (
     <List className={classes.list}>
       <ListItem className={classes.listItem}>
@@ -51,7 +72,8 @@ function HeaderLinks({ ...props }) {
         >
           <Person className={classes.icons} /> Profile
         </Button>
-      </ListItem>
+        </ListItem>
+      }
       <ListItem className={classes.listItem}>
         <Button
           href="/"

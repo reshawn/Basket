@@ -7,7 +7,7 @@ import Email from "@material-ui/icons/Email";
 import People from "@material-ui/icons/People";
 import LockOutlined from "@material-ui/icons/LockOutlined";
 // React icons
-import {FaFacebook, FaTwitter, FaGooglePlusG } from 'react-icons/fa';
+import { FaFacebook, FaTwitter, FaGooglePlusG } from 'react-icons/fa';
 // core components
 import Header from "components/Header/Header.jsx";
 import HeaderLinks from "components/Header/HeaderLinks.jsx";
@@ -24,19 +24,86 @@ import CustomInput from "components/CustomInput/CustomInput.jsx";
 import loginPageStyle from "assets/jss/material-kit-react/views/loginPage.jsx";
 
 import image from "assets/img/bg7.jpg";
+import { withFirebase } from "../../withFirebase"
 
 class LoginPage extends React.Component {
   constructor(props) {
     super(props);
     // we use this to make the card to appear after the page has been rendered
     this.state = {
-      cardAnimaton: "cardHidden"
+      cardAnimaton: "cardHidden",
+      firebaseInit: false,
+      email: '',
+      password: '',
     };
+  }
+
+  componentDidUpdate(prevProps) {
+    if (!prevProps.firebase && this.props.firebase) {
+      this.setState({ firebaseInit: true });
+    }
+    if (this.state.firebaseInit) {
+      this.props.firebase.auth().onAuthStateChanged(user => {
+        if (user) {
+          window.location = '/profile-page'; //After successful login, user will be redirected to home.html
+        }
+      });
+    }
+  }
+  onChange = event => {
+    this.setState({ [event.target.name]: event.target.value });
+  };
+  googleSignIn() {
+    if (this.state.firebaseInit) {
+      var provider = new this.props.firebase.auth.GoogleAuthProvider();
+      this.props.firebase.auth().signInWithPopup(provider).then(function (result) {
+      }).catch(function (error) {
+        // Handle Errors here.
+        var errorCode = error.code;
+        var errorMessage = error.message;;
+        console.log(errorCode, errorMessage)
+      });
+    }
+  }
+  signIn() {
+    if (this.state.firebaseInit) {
+      let email = this.state.email
+      let password = this.state.password
+      this.props.firebase.auth().signInWithEmailAndPassword(email, password)
+        .then(function () { console.log('test1') })
+        .catch(function (error) {
+          // Handle Errors here.
+          var errorCode = error.code;
+          var errorMessage = error.message;
+          console.log(errorCode, errorMessage);
+        });
+
+    }
+  }
+  signUp() {
+    if (this.state.firebaseInit) {
+      let email = this.state.email
+      let password = this.state.password
+      this.props.firebase.auth().createUserWithEmailAndPassword(email, password)
+
+        .catch(function (error) {
+          // Handle Errors here.
+          var errorCode = error.code;
+          var errorMessage = error.message;
+          console.log(errorCode, errorMessage);
+          // ...
+        });
+
+    }
+  }
+
+  onSubmit = () => {
+    this.signIn();
   }
   componentDidMount() {
     // we add a hidden class to the card and after 700 ms we delete it and the transition appears
     setTimeout(
-      function() {
+      function () {
         this.setState({ cardAnimaton: "" });
       }.bind(this),
       700
@@ -71,30 +138,10 @@ class LoginPage extends React.Component {
                       <div className={classes.socialLine}>
                         <Button
                           justIcon
-                          href="#pablo"
-                          target="_blank"
                           color="transparent"
-                          onClick={e => e.preventDefault()}
+                          onClick={e => this.googleSignIn()}
                         >
-                          <FaTwitter/>
-                        </Button>
-                        <Button
-                          justIcon
-                          href="#pablo"
-                          target="_blank"
-                          color="transparent"
-                          onClick={e => e.preventDefault()}
-                        >
-                          <FaFacebook/>
-                        </Button>
-                        <Button
-                          justIcon
-                          href="#pablo"
-                          target="_blank"
-                          color="transparent"
-                          onClick={e => e.preventDefault()}
-                        >
-                          <FaGooglePlusG/>
+                          <FaGooglePlusG />
                         </Button>
                       </div>
                     </CardHeader>
@@ -123,6 +170,9 @@ class LoginPage extends React.Component {
                         }}
                         inputProps={{
                           type: "email",
+                          name: "email",
+                          value: this.state.email,
+                          onChange: this.onChange,
                           endAdornment: (
                             <InputAdornment position="end">
                               <Email className={classes.inputIconsColor} />
@@ -138,16 +188,19 @@ class LoginPage extends React.Component {
                         }}
                         inputProps={{
                           type: "password",
+                          name: "password",
+                          value: this.state.password,
+                          onChange: this.onChange,
                           endAdornment: (
                             <InputAdornment position="end">
-                              <LockOutlined/>
+                              <LockOutlined />
                             </InputAdornment>
                           )
                         }}
                       />
                     </CardBody>
                     <CardFooter className={classes.cardFooter}>
-                      <Button simple color="primary" size="lg">
+                      <Button onClick={this.onSubmit} simple color="primary" size="lg">
                         Get started
                       </Button>
                     </CardFooter>
@@ -163,4 +216,4 @@ class LoginPage extends React.Component {
   }
 }
 
-export default withStyles(loginPageStyle)(LoginPage);
+export default withFirebase(withStyles(loginPageStyle)(LoginPage));

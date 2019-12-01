@@ -18,6 +18,7 @@ import Parallax from "components/Parallax/Parallax.jsx";
 import profile from "assets/img/faces/userprofile.png";
 
 import profilePageStyle from "assets/jss/material-kit-react/views/profilePage.jsx";
+import TabCards from './TabCards'
 
 class ProfilePage extends React.Component {
   render() {
@@ -63,8 +64,9 @@ class ProfilePage extends React.Component {
                   This section would be a section filled with spicy campaign details based on your activity.
                   But I guess you are still just a mere novice. You'll get up there some day!
                 </p>
-              </div>
 
+              </div>
+              <TabCards />
             </div>
           </div>
         </div>

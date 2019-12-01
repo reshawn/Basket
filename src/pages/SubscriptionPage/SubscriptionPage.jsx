@@ -53,7 +53,7 @@ class SubscriptionPage extends React.Component {
                 <Header
                     absolute
                     color="transparent"
-                    brand="Material Kit React"
+                    brand="Basket"
                     rightLinks={<HeaderLinks />}
                     {...rest}
                 />

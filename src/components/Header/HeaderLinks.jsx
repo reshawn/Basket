@@ -91,7 +91,7 @@ function HeaderLinks({ ...props }) {
       }
       <ListItem className={classes.listItem}>
         <Button
-          href="/"
+          href="/subscription"
           color="transparent"
           className={classes.navLink}
         >

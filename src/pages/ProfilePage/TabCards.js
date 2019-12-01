@@ -20,11 +20,10 @@ class SectionTabs extends React.Component {
             <div className={classes.section}>
                 <div className={classes.container}>
                     <div id="nav-tabs">
-                        <h3>Navigation Tabs</h3>
                         <GridContainer>
                             <GridItem xs={12} sm={12} md={6}>
                                 <h3>
-                                    <small>Tabs with Icons on Card</small>
+                                    <small>Summary</small>
                                 </h3>
                                 <CustomTabs
                                     headerColor="primary"
@@ -34,14 +33,14 @@ class SectionTabs extends React.Component {
                                             tabIcon: Face,
                                             tabContent: (
                                                 <p className={classes.textCenter}>
-                                                    I think that’s a responsibility that I have, to push
-                                                    possibilities, to show people, this is the level that
-                                                    things could be at. So when you get something that has
-                                                    the name Kanye West on it, it’s supposed to be pushing
-                                                    the furthest possibilities. I will be the leader of a
-                                                    company that ends up being worth billions of dollars,
-                                                    because I got the answers. I understand culture. I am
-                                                    the nucleus.
+                                                    
+                                                    <ul>
+                                                        <li>Current Subscription - <strong>Basic</strong></li>
+                                                        <li>Servers Joined  - <strong>2</strong></li>
+                                                        <li>Maps Created - <strong>2</strong></li>
+                                                        <li>Sold Campaigns - <strong>0</strong> </li>
+                                                        <li>Community Points - <strong>499</strong></li>
+                                                    </ul>
                         </p>
                                             )
                                         },
@@ -50,14 +49,7 @@ class SectionTabs extends React.Component {
                                             tabIcon: Chat,
                                             tabContent: (
                                                 <p className={classes.textCenter}>
-                                                    I think that’s a responsibility that I have, to push
-                                                    possibilities, to show people, this is the level that
-                                                    things could be at. I will be the leader of a company
-                                                    that ends up being worth billions of dollars, because
-                                                    I got the answers. I understand culture. I am the
-                                                    nucleus. I think that’s a responsibility that I have,
-                                                    to push possibilities, to show people, this is the
-                                                    level that things could be at.
+                                                    There are no messages to view at this time.
                         </p>
                                             )
                                         },
@@ -66,14 +58,7 @@ class SectionTabs extends React.Component {
                                             tabIcon: Build,
                                             tabContent: (
                                                 <p className={classes.textCenter}>
-                                                    think that’s a responsibility that I have, to push
-                                                    possibilities, to show people, this is the level that
-                                                    things could be at. So when you get something that has
-                                                    the name Kanye West on it, it’s supposed to be pushing
-                                                    the furthest possibilities. I will be the leader of a
-                                                    company that ends up being worth billions of dollars,
-                                                    because I got the answers. I understand culture. I am
-                                                    the nucleus.
+                                                    Currently under maintenance.
                         </p>
                                             )
                                         }
@@ -82,7 +67,7 @@ class SectionTabs extends React.Component {
                             </GridItem>
                             <GridItem xs={12} sm={12} md={6}>
                                 <h3>
-                                    <small>Tabs on Plain Card</small>
+                                    <small>New</small>
                                 </h3>
                                 <CustomTabs
                                     plainTabs
@@ -92,14 +77,8 @@ class SectionTabs extends React.Component {
                                             tabName: "Home",
                                             tabContent: (
                                                 <p className={classes.textCenter}>
-                                                    I think that’s a responsibility that I have, to push
-                                                    possibilities, to show people, this is the level that
-                                                    things could be at. So when you get something that has
-                                                    the name Kanye West on it, it’s supposed to be pushing
-                                                    the furthest possibilities. I will be the leader of a
-                                                    company that ends up being worth billions of dollars,
-                                                    because I got the answers. I understand culture. I am
-                                                    the nucleus.
+                                                    Invite your friends and play D&D Campaigns. Make Maps
+                                                    to enrich your Campaign experience.
                         </p>
                                             )
                                         },
@@ -107,32 +86,14 @@ class SectionTabs extends React.Component {
                                             tabName: "Updates",
                                             tabContent: (
                                                 <p className={classes.textCenter}>
-                                                    I think that’s a responsibility that I have, to push
-                                                    possibilities, to show people, this is the level that
-                                                    things could be at. I will be the leader of a company
-                                                    that ends up being worth billions of dollars, because
-                                                    I got the answers. I understand culture. I am the
-                                                    nucleus. I think that’s a responsibility that I have,
-                                                    to push possibilities, to show people, this is the
-                                                    level that things could be at.
+                                                    <ul>
+                                                        <li>Added custom audio options</li>
+                                                        <li>Can now import character sheets from other site</li>
+                                                    </ul>
                         </p>
                                             )
                                         },
-                                        {
-                                            tabName: "History",
-                                            tabContent: (
-                                                <p className={classes.textCenter}>
-                                                    think that’s a responsibility that I have, to push
-                                                    possibilities, to show people, this is the level that
-                                                    things could be at. So when you get something that has
-                                                    the name Kanye West on it, it’s supposed to be pushing
-                                                    the furthest possibilities. I will be the leader of a
-                                                    company that ends up being worth billions of dollars,
-                                                    because I got the answers. I understand culture. I am
-                                                    the nucleus.
-                        </p>
-                                            )
-                                        }
+                                      
                                     ]}
                                 />
                             </GridItem>

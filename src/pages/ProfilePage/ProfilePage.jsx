@@ -53,7 +53,7 @@ class ProfilePage extends React.Component {
                       <img src={profile} alt="..." className={imageClasses} />
                     </div>
                     <div className={classes.name}>
-                      <h3 className={classes.title}>Your User ProfilePage</h3>
+                      <h3 className={classes.title}>Your User Profile Page</h3>
                       <h6></h6>
                     </div>
                   </div>

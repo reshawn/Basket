@@ -64,7 +64,7 @@ class LandingPage extends React.Component {
                 <Button
                   color="danger"
                   size="lg"
-                  href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+                  href="https://youtu.be/S7ocHSKy4x8"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
